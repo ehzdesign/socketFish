@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>controller</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 
 
 
@@ -18,9 +20,19 @@
 
 </head>
 <body>
+  <main id="main" class="main">
+    <!-- main content area to replace with ajax -->
+    <div id="form">
+      <h1 id="title" class="u-drop-shadow">fishcape</h1>
+      <input id="username" type="text">
+      <p class="form__label">enter username</p>
+      <button id="join-btn" class="u-drop-shadow" type="button" name="join">join game</button>
+    </div>
+    <!-- end of main content area -->
+  </main>
 
 
-
+<!--
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -28,25 +40,25 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12"> -->
         <!-- where to register a player  -->
-        <div class="register-player">
+        <!-- <div class="register-player">
           <input type="text" name="name" value="" id="player-name">
           <button id="join-btn" class="btn">join game</button>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12"> -->
         <!-- show a list of player currently in game -->
-        <ul id="players">
+        <!-- <ul id="players">
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/lodash/4.16.4/lodash.min.js" charset="utf-8"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="player.js" charset="utf-8"></script>
