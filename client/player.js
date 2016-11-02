@@ -1,6 +1,7 @@
 //initialize socket
 var socket = io();
 
+
 //store player name that is given through input
 var playerInputName = $('#username');
 
@@ -30,6 +31,7 @@ $('#join-btn').on('click', function(event) {
 
   console.log(player);
 
+  //call the next screen that shows the players
   loadPregame();
 
   //clear the register form ajax load next page
@@ -52,9 +54,8 @@ function loadPregame(){
     if ($("#main").html() != response) {
     $("#content").fadeOut(200, function() {
       $("#main").html(response);
-      $('.countdown').fadeIn().delay(1000);
+      $('.countdown').fadeIn();
     });
-    // $('#main').html(result);
 
   }
 })
@@ -68,10 +69,15 @@ function loadPregame(){
 
 
 
-// socket.on('players', function(msg){
-//   console.log(msg);
-//   displayCurrentPlayers(msg);
-// });
+  socket.on('players', function(msg){
+    console.log(msg);
+    displayCurrentPlayers(msg);
+  });
+
+
+
+
+
 //
 //
 //
@@ -87,14 +93,17 @@ function loadPregame(){
 
 //
 // //show all current players logged in
-// function displayCurrentPlayers(players) {
-//   // clear the players list
-//   $('#players').html('');
-//   //print all the players names and id's
-//   $.each(players, function(index, el) {
-//     $('<li>').text('name:' + el.name + ' id:' + el.id).appendTo($('#players'));
-//   });
-// }
+function displayCurrentPlayers(players) {
+  // clear the players list
+  $('#players-list').html('');
+
+  //print all the players names and id's
+  $.each(players, function(index, el) {
+
+    $('<li>').text('name:' + el.name + ' id:' + el.id).appendTo($('#players-list'));
+
+  });
+}
 //
 //
 // //redirect to game pager
