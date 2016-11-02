@@ -13,7 +13,7 @@
 
 .main input,
 .main button,
-.main{
+body{
   font-family: 'Boogaloo', cursive;
   color: white;
 }
@@ -50,11 +50,15 @@ h1{
   filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.4));
 }
 
+.u-no-display{
+  display: none;
+}
+
 
 
 /*username form*/
 
-#form{
+#content{
   min-width: 90%;
   text-align: center;
 }
@@ -73,4 +77,26 @@ margin-top: 1em;
 
 input#username:focus{
   outline: none;
+}
+
+
+/*countdown clock*/
+
+.countdown__timer{
+  position: absolute;
+  height: 1.5em;
+  width: 1.5em;
+  background: #4cd2b4;
+  border-radius: 50%;
+  top: 3rem;
+  right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+
+}
+
+.countdown__number span {
+  font-size: 0.5em;
 }
